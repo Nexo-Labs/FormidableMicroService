@@ -1,0 +1,9 @@
+services:
+  notion-app:
+    build: .
+    ports:
+      - "5001:5000"
+    environment:
+      - NOTION_TOKEN=${NOTION_TOKEN}
+      - DATABASE_ID=${DATABASE_ID}
+    restart: unless-stopped
